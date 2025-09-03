@@ -1,0 +1,248 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #111;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  padding: 5px 0;
+}
+
+/* Hover + animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #e63946;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #e63946;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.nav-links a.active {
+  color: #e63946;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Hamburger to X animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+/* Hero */
+.about-hero {
+  background: url("images/gym-bg.jpg") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  color: #e63946;
+  font-size: 1.2rem;
+}
+
+/* About Content */
+.about-content {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+  color: #e63946;
+}
+
+.about-content p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.about-content ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.about-content li {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* Team Section */
+.about-team {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.team-card h3 {
+  margin: 0.5rem 0;
+  color: #e63946;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+ .nav-links {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden */
+    width: 250px;
+    height: 100%;
+    padding-top: 80px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Slide in */
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-content{
+    font-size: 16px;
+  } */
+}

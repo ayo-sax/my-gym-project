@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDDY'S GYM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GIDDY'S GYM</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#bmi">BMI/Burn</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#signin">Register</a></li>
+        <li><a href="#testimonials">Feedbacks</a></li>
+        <li><a href="payment.html">Pay Room</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="videos/video_preview_h264.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+      <h1>Transform Your Body Today!</h1>
+      <button onclick="document.getElementById('signin').scrollIntoView({behavior:'smooth'})">
+        Join Now
+      </button>
+  </div>
+</div>
+    </div>
+  </section>
+  
+  <!-- Stats / Counters -->
+  <section class="stats fade-in">
+    <div>
+      <div class="counter" data-target="5000">0</div>
+      <div class="counter" data-target="100">0</div>
+      <div class="counter" data-target="500">0</div>
+    </div>
+    <div>
+      <p>Clients Trained</p>
+      <p>Expert Trainers</p>
+      <p>Weekly Classes</p>
+    </div>
+    
+  </section>
+
+  <!-- Membership Plans -->
+  <section id="membership" class="membership">
+    <h2>Membership Plans</h2>
+    <div class="plans">
+      <div class="card">
+        <h3>Basic</h3>
+        <p>$20/month</p>
+        <ul>
+          <li>Access to gym floor</li>
+          <li>1 trainer consultation</li>
+        </ul>
+        <button><a href="payment.html">Join Now</a></button>
+      </div>
+      <div class="card">
+        <h3>Standard</h3>
+        <p>$40/month</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Group classes included</li>
+        </ul>
+        <button><a href="payment.html">Join Now</a></button>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p>$70/month</p>
+        <ul>
+          <li>All Standard benefits</li>
+          <li>Personal trainer</li>
+          <li>Nutrition plan</li>
+        </ul>
+        <button><a href="payment.html">Join Now</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign-Up Form -->
+  <section class="signup"   id="signin">
+    <h2 id="signup">Sign Up Here</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="tel" id="phone" placeholder="Phone">
+      <select id="plan">
+        <option value="">Select Membership Plan</option>
+        <option>Basic</option>
+        <option>Standard</option>
+        <option>Premium</option>
+      </select>
+      <button type="submit"> Submit <i class="fa-solid fa-right-to-bracket"></i></button>
+    </form>
+  </section>
+
+  <!-- Trainer Profiles -->
+  <section id="trainers" class="trainers">
+    <h2>Meet Our Trainers</h2>
+    <div class="trainer-grid">
+      <div class="trainer-card">
+        <img src="images/download (5).webp" alt="Trainer">
+        <h3>STEVE SMITH</h3>
+        <p>HIIT COACH</p>
+      </div>
+      <div class="trainer-card">
+        <img src="images/OIP (1).webp" alt="Trainer">
+        <h3>JOHN DOE</h3>
+        <p>YOGA TRAINER</p>
+      </div>
+      <div class="trainer-card">
+        <img src="images/download.webp" alt="Trainer">
+        <h3>DAVID WELSON</h3>
+        <p>ZUMBA TRAINER</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule
+  <section id="schedule" class="schedule">
+    <h2>Class Schedule</h2>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+      </tr>
+      <tr>
+        <td>7AM</td>
+        <td>Yoga 🧘</td><td></td><td>Zumba 💃</td><td></td><td>HIIT 🔥</td><td></td><td>-</td>
+      </tr>
+      <tr>
+        <td>6PM</td>
+        <td>HIIT 🔥</td><td>Zumba 💃</td><td></td><td>Yoga 🧘</td><td></td><td>Zumba 💃</td><td>-</td>
+      </tr>
+    </table>
+  </section> -->
+
+  <!-- BMI Calculator -->
+  <section id="bmi" class="bmi">
+    <h2>BMI Calculator</h2>
+    <form id="bmiForm">
+      <input type="number" id="height" placeholder="Height (cm)">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="bmiResult"></div>
+  </section>
+
+  <section class="burn-calculator">
+    <h2>Estimate Your Burn</h2>
+    <input type="number" id="minutes" placeholder="Workout Duration (min)">
+    <button id="calcBurn">Calculate</button>
+    <p id="burnResult"></p>
+  </section>
+
+    <!-- Testimonials (Carousel with Dots) -->
+<section class="testimonials" id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-card active">
+      <p>“Giddy’s Gym completely changed my life! I lost 10kg in 3 months and gained so much confidence.”</p>
+      <h3>- Sarah K.</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>“The trainers here are amazing. The Premium plan gave me a personal trainer and a nutrition plan that worked wonders.”</p>
+      <h3>- Michael T.</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>“I love the group classes! Zumba is my favorite and it makes workouts so much fun.”</p>
+      <h3>- Anita L.</h3>
+    </div>
+  </div>
+  <div class="testimonial-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- Transformations -->
+<section class="transformations">
+  <h2>Client Transformations</h2>
+  <div class="ba-container">
+    <img src="images/ChatGPT Image Sep 3, 2025, 01_46_56 AM.png" alt="Before Transformation" class="before">
+    <div class="after-wrapper">
+      <img src="images/ChatGPT Image Sep 3, 2025, 01_50_09 AM.png" alt="After Transformation" class="after">
+    </div>
+    <div class="slider-handle"></div>
+  </div>
+</section>
+
+<section class="faq" id="faqs">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <button class="faq-question">Do I need prior fitness experience?</button>
+    <div class="faq-answer"><p>Nope! We tailor workouts for all levels—from beginners to advanced.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">What should I bring to the gym?</button>
+    <div class="faq-answer"><p>Just yourself, comfortable clothes, and a water bottle. We’ve got the rest covered!</p></div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Contact Us</h3>
+        <p>123 Gym Street, Lagos</p>
+        <p>Email: info@kuyegideon35@gmail.com</p>
+        <p>Phone: +234 701 060 8938</p>
+      </div>
+      <div class="font">
+        <i class="fa-brands fa-whatsapp fa-beat fa-2xl"></i><br>
+        <a href="https://wa.me/2347010608938">contact us whatsapp</a>
+      </div>
+      <div class="font">
+        <i class="fa-brands fa-instagram fa-beat fa-2xl"></i><br>
+        <a href="https://www.instagram.com/kuyegideon25/">contact us on IG</a>
+      </div>
+      <div>
+        <h3>Opening Hours</h3>
+        <p>Mon-Sat: 6am - 9pm</p>
+        <p>Sun: Closed</p>
+      </div>
+    </div>
+    <p>&copy;2025 GIDDY'S GYM. All rights reserved.</p>
+  </footer>
+
+  <script src="Script.js"></script>
+</body>
+</html>

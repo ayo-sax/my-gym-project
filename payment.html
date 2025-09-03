@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Payment - GIDDY'S GYM</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">GIDDY'S GYM</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#bmi">BMI/Burn</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#signin">Register</a></li>
+        <li><a href="#testimonials">Feedbacks</a></li>
+        <li><a href="payment.html">Pay Room</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="home">
+    <!-- Payment Section -->
+  <section class="payment-container">
+    <h1>Secure Payment</h1>
+    <p>Complete your payment for <strong>GIDDY’S GYM</strong> membership.</p>
+
+    <form class="payment-form">
+      <!-- Personal Info -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="plan">Membership Plan</label>
+        <select id="plan" required>
+          <option value="">Select a plan</option>
+          <option value="basic">Basic - $20/month</option>
+          <option value="standard">Standard - $40/month</option>
+          <option value="premium">Premium - $70/month</option>
+        </select>
+      </div>
+
+      <!-- Card Payment -->
+      <h2>Payment Details</h2>
+      <div class="form-group">
+        <label for="cardname">Cardholder Name</label>
+        <input type="text" id="cardname" placeholder="Name on Card" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cardnumber">Card Number</label>
+        <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" maxlength="16" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="pay-btn">Pay Now</button>
+    </form>
+  </section>
+</div>
+
+<!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 GIDDY'S GYM. All rights reserved.</p>
+  </footer>
+
+<script src="about/pay-script.js"></script>
+</body>
+</html>
