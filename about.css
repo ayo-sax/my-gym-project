@@ -27,10 +27,9 @@ header {
   z-index: 1001;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #e63946;
+.logo img{
+  border-radius: 30px;
+  width: 80px;
 }
 
 .nav-links {
