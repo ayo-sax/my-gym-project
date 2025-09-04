@@ -113,7 +113,6 @@ header {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  autoplay: true;
 }
 .hero-video video {
   width: 100%;
